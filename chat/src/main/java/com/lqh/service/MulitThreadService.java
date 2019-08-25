@@ -97,7 +97,7 @@ public class MulitThreadService {
                             e.printStackTrace();
                         }
 
-                    }else if(msgFromClient.getType() == 3){
+                    }else if(msgFromClient.getType() == 4){
                         //注册群聊
                         //TODO
                     }

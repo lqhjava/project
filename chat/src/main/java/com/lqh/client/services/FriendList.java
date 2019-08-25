@@ -26,6 +26,7 @@ public class FriendList {
     //缓存所有私聊界面
     private Map<String,PrivateChat> privateChatList = new ConcurrentHashMap<>();
 
+    //
     private class DaemonTask implements Runnable{
         //好友上线提醒
         private Scanner scanner = new Scanner(clientToService.getInputStream());
@@ -96,7 +97,7 @@ public class FriendList {
     }
 
     //点击私聊事件
-    private class ChangeLablePanel implements MouseListener {
+    private class PriateChat implements MouseListener {
         private String friendName;
         public ChangeLablePanel(String lableName){
             this.friendName = lableName;
@@ -139,7 +140,9 @@ public class FriendList {
     }
 
     //点击创建群聊 开始群聊
+    private class GroupChat{
 
+    }
 
     //加载好友列表
     public void reloadFriendList(){
