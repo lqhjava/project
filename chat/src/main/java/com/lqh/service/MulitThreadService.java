@@ -8,10 +8,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -20,14 +17,18 @@ import java.util.concurrent.Executors;
  * 服务器
  */
 public class MulitThreadService {
+    private static final String IP;
     private static final Integer PORT;
     static{
         //加载服务器的配置
         Properties properties = Commutils.loadProperties("socket.properties");
+        IP = properties.getProperty("IP");
         PORT = Integer.valueOf(properties.getProperty("PORT"));
     }
     //服务器用来缓存在线的客户
     private static Map<String, Socket> clients = new ConcurrentHashMap<>();
+    //服务器用来缓存群名和群成员的
+    private static Map<String,Set<String>> groups = new ConcurrentHashMap<>();
 
     //服务器处理用户发来的请求
     public static class ExecuteClient implements Runnable{
@@ -54,7 +55,7 @@ public class MulitThreadService {
                     MessageVO msgFromClient = (MessageVO) Commutils.
                             jsonToObject(strFromClient,MessageVO.class);
                     //处理请求
-                    if(msgFromClient.getType().equals(1)){
+                    if(msgFromClient.getType().equals("1")){
                         //登陆
                         String username = msgFromClient.getMsg();
                         Set<String> names = clients.keySet();
@@ -80,7 +81,7 @@ public class MulitThreadService {
                         clients.put(username,client);
                         //统计在线人数
                         System.out.println("在线人数"+ clients.size());
-                    }else if(msgFromClient.getType().equals(2)){
+                    }else if(msgFromClient.getType().equals("2")){
                         //私聊  Type==2
                         //获取要发送用户
                         String friendName = msgFromClient.getTo();
@@ -97,9 +98,38 @@ public class MulitThreadService {
                             e.printStackTrace();
                         }
 
-                    }else if(msgFromClient.getType() == 4){
+                    }else if(msgFromClient.getType().equals("3")){
                         //注册群聊
-                        //TODO
+                        //获取信息
+                        String groupName = msgFromClient.getMsg();
+                        MessageVO messageVO = new MessageVO();
+                        Set<String> friends = (Set<String>)Commutils.jsonToObject(
+                                msgFromClient.getTo(),Set.class);
+                        groups.put(groupName,friends);
+                        System.out.println("有新的群聊注册成功，群聊名称为"+groupName+"一共有"+groups.size()+"个群");
+                    }else if(msgFromClient.getType().equals("4")){
+                        //群聊信息  发送给每个群成员
+                        String groupName = msgFromClient.getTo();
+                        //保存群名
+                        Set<String> names = groups.get(groupName);
+                        Iterator<String> iterator = names.iterator();
+                        while (iterator.hasNext()){
+                            System.out.println("服务器接受的信息为"+msgFromClient);
+                            String socketName = iterator.next();
+                            Socket client = clients.get(socketName);
+                            try {
+                                PrintStream out = new PrintStream(client.getOutputStream(),true,"UTF-8");
+                                MessageVO messageVO = new MessageVO();
+                                messageVO.setType(4);
+                                messageVO.setMsg(msgFromClient.getMsg());
+                                messageVO.setTo(groupName+"-"+Commutils.objToJson(names));
+                                out.println(Commutils.objToJson(messageVO));
+                                System.out.println("服务器发送的信息为"+messageVO);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+
                     }
                 }
             }

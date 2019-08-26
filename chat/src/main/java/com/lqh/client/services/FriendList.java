@@ -4,6 +4,8 @@ import com.lqh.utils.Commutils;
 import com.lqh.vo.MessageVO;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.Iterator;
@@ -25,8 +27,13 @@ public class FriendList {
     private Set<String> users;
     //缓存所有私聊界面
     private Map<String,PrivateChat> privateChatList = new ConcurrentHashMap<>();
+    //缓存所有群聊名称和群星恒源
+    private Map<String,Set<String>> groupChatLsit = new ConcurrentHashMap<>();
+    //存储所有的群聊界面
+    private Map<String,GroupChat> groupList = new ConcurrentHashMap<>();
 
-    //
+
+   //好友上线
     private class DaemonTask implements Runnable{
         //好友上线提醒
         private Scanner scanner = new Scanner(clientToService.getInputStream());
@@ -91,15 +98,24 @@ public class FriendList {
         frame.setVisible(true);
 
         reloadFriendList();
+        //创建线程接受服务端的信息
         Thread daemonThread = new Thread(new DaemonTask());
         daemonThread.setDaemon(true);
         daemonThread.start();
+        //创建群组
+        createGroupBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new GroupChatClick(userName,users,connectToServer,
+                        FriendList.this);
+            }
+        });
     }
 
     //点击私聊事件
-    private class PriateChat implements MouseListener {
+    private class PrvateChatClick implements MouseListener {
         private String friendName;
-        public ChangeLablePanel(String lableName){
+        public PrvateChatClick(String lableName){
             this.friendName = lableName;
         }
         @Override
@@ -140,8 +156,47 @@ public class FriendList {
     }
 
     //点击创建群聊 开始群聊
-    private class GroupChat{
+    private class GroupChatClick implements MouseListener{
+        private String groupName;
 
+        public GroupChatClick(String groupName){
+            this.groupName = groupName;
+        }
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            //鼠标点击 创建群聊
+            //如果已经有打开过群聊
+            if(groupChatLsit.containsKey(groupName)){
+                GroupChat groupChat = groupList.get(groupName);
+                groupChat.getFrame().setVisible(true);
+            }else {
+                //新的群聊
+                Set<String> names = groupChatLsit.get(groupName);
+                GroupChat groupChat = new GroupChat(groupName,names,myName,clientToService);
+                groupList.put(groupName,groupChat);
+            }
+
+        }
+
+        @Override
+        public void mousePressed(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e) {
+
+        }
     }
 
     //加载好友列表
@@ -167,5 +222,33 @@ public class FriendList {
        //设置滚动条为垂直
         this.friendPanel.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         this.friendPanel.revalidate();
+    }
+
+    //加载群聊列表
+    public void reloadGroupList(){
+        //存储所有群聊名称
+        JPanel groupNamePanel = new JPanel();
+        groupNamePanel.setLayout(new BoxLayout(groupNamePanel,
+                BoxLayout.Y_AXIS));
+        JLabel[] labels = new JLabel[groupChatLsit.size()];
+        //遍历Map
+        Set<Map.Entry<String,Set<String>>> entries = groupChatLsit.entrySet();
+        Iterator<Map.Entry<String,Set<String>>> iterator =
+                entries.iterator();
+        int i = 0;
+        while (iterator.hasNext()){
+            //获取去群名称及群好友
+            Map.Entry<String,Set<String>> entry = iterator.next();
+            //显示
+            labels[i] = new JLabel(entry.getKey());
+            labels[i].addMouseListener(new GroupChatClick(entry.getKey()));
+            groupNamePanel.add(labels[i]);
+            i++;
+        }
+    }
+
+    //添加群聊
+    public void addGroup(String groupName,Set<String> friends){
+        groupChatLsit.put(groupName,friends);
     }
 }
