@@ -22,8 +22,8 @@ public class MulitThreadService {
     static{
         //加载服务器的配置
         Properties properties = Commutils.loadProperties("socket.properties");
-        IP = properties.getProperty("IP");
-        PORT = Integer.valueOf(properties.getProperty("PORT"));
+        IP = properties.getProperty("address");
+        PORT = Integer.valueOf(properties.getProperty("port"));
     }
     //服务器用来缓存在线的客户
     private static Map<String, Socket> clients = new ConcurrentHashMap<>();
@@ -55,7 +55,7 @@ public class MulitThreadService {
                     MessageVO msgFromClient = (MessageVO) Commutils.
                             jsonToObject(strFromClient,MessageVO.class);
                     //处理请求
-                    if(msgFromClient.getType().equals("1")){
+                    if(msgFromClient.getType().equals(1)){
                         //登陆
                         String username = msgFromClient.getMsg();
                         Set<String> names = clients.keySet();
@@ -64,24 +64,16 @@ public class MulitThreadService {
                         msgFromClient.setType(1);
                         msgToClient.setMsg(Commutils.objToJson(names));
                         out.println(Commutils.objToJson(msgToClient));
-                        String msg = "newlogin:"+username;
-                        for(Socket socket:clients.values()){
-                            //发送
-                            try{
-                                PrintStream out = new PrintStream(socket.getOutputStream(),
-                                        true,"UTF-8");
-                                out.println(msg);
-                            }catch (IOException e){
-                                e.printStackTrace();
-                            }
-                        }
+                        String msg = "newLogin:"+username;
                         //将用户保存到服务器缓存中
                         //服务器显示信息
                         System.out.println(username+"上线了");
+                        System.out.println(msg);
+                        sendUserLogin(msg);
                         clients.put(username,client);
                         //统计在线人数
                         System.out.println("在线人数"+ clients.size());
-                    }else if(msgFromClient.getType().equals("2")){
+                    }else if(msgFromClient.getType().equals(2)){
                         //私聊  Type==2
                         //获取要发送用户
                         String friendName = msgFromClient.getTo();
@@ -98,7 +90,7 @@ public class MulitThreadService {
                             e.printStackTrace();
                         }
 
-                    }else if(msgFromClient.getType().equals("3")){
+                    }else if(msgFromClient.getType().equals(3)){
                         //注册群聊
                         //获取信息
                         String groupName = msgFromClient.getMsg();
@@ -107,14 +99,14 @@ public class MulitThreadService {
                                 msgFromClient.getTo(),Set.class);
                         groups.put(groupName,friends);
                         System.out.println("有新的群聊注册成功，群聊名称为"+groupName+"一共有"+groups.size()+"个群");
-                    }else if(msgFromClient.getType().equals("4")){
+                    }else if(msgFromClient.getType().equals(4)){
+                        System.out.println("服务器接受的信息为"+msgFromClient);
                         //群聊信息  发送给每个群成员
                         String groupName = msgFromClient.getTo();
                         //保存群名
                         Set<String> names = groups.get(groupName);
                         Iterator<String> iterator = names.iterator();
                         while (iterator.hasNext()){
-                            System.out.println("服务器接受的信息为"+msgFromClient);
                             String socketName = iterator.next();
                             Socket client = clients.get(socketName);
                             try {
@@ -134,6 +126,18 @@ public class MulitThreadService {
                 }
             }
 
+        }
+        private void sendUserLogin(String msg) {
+            for (Map.Entry<String,Socket> entry: clients.entrySet()) {
+                Socket socket = entry.getValue();
+                try {
+                    PrintStream out = new PrintStream(socket.getOutputStream(),
+                            true,"UTF-8");
+                    out.println(msg);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 

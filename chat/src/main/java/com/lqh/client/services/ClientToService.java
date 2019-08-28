@@ -18,8 +18,8 @@ public class ClientToService {
 
     static{
         Properties properties = Commutils.loadProperties("socket.properties");
-        PORT = Integer.valueOf(properties.getProperty("PORT")) ;
-        IP = properties.getProperty("IP");
+        PORT = Integer.valueOf(properties.getProperty("port")) ;
+        IP = properties.getProperty("address");
     }
 
     public  ClientToService(){

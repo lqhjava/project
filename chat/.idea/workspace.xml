@@ -60,16 +60,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/CreateGroupGUI.form">
-          <provider selected="true" editor-type-id="ui-designer" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/GroupChat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="73" column="46" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/CreateGroupGUI.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/PrivateChat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+            <state relative-caret-position="420">
+              <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/Login.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="108" column="11" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,9 +120,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lqh/client/services/UserReg.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lqh/client/services/UserReg.form" />
         <option value="$PROJECT_DIR$/src/main/java/com/lqh/client/dao/AccontDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resouices/socket.properties" />
         <option value="$PROJECT_DIR$/../java49_chatroom/src/main/resources/socket.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lqh/client/services/ClientToService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lqh/client/services/Login.form" />
         <option value="$PROJECT_DIR$/src/main/java/com/lqh/utils/Commutils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lqh/client/services/Login.java" />
@@ -114,13 +128,20 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lqh/client/services/FriendList.form" />
         <option value="$PROJECT_DIR$/src/test/java/com/lqh/utils/JDBCTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lqh/client/services/PrivateChat.form" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lqh/client/services/PrivateChat.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lqh/client/services/GroupChat.form" />
         <option value="$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/FriendsList.java" />
         <option value="$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/GroupChatGUI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lqh/client/services/GroupChat.java" />
+        <option value="$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/CreateGroupGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lqh/client/services/CreatGroupChat.form" />
+        <option value="$PROJECT_DIR$/src/main/resouices/socket.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lqh/client/services/ClientToService.java" />
+        <option value="$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/PrivateChatGUI.form" />
+        <option value="$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/PrivateChatGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lqh/client/services/PrivateChat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lqh/client/services/CreatGroupChat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lqh/client/services/GroupChat.form" />
         <option value="$PROJECT_DIR$/src/main/java/com/lqh/service/MulitThreadService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lqh/client/services/FriendList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lqh/client/services/GroupChat.java" />
       </list>
     </option>
   </component>
@@ -160,6 +181,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -242,6 +265,66 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="lqh" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="CreatGroupChat" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lqh" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="FriendList" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lqh" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="GroupChat" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lqh" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="Login" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lqh" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="PrivateChat" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lqh" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -261,115 +344,10 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resouices" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatroom_basedonswing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatroom_basedonswing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatroom_basedonswing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatroom_basedonswing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatroom_basedonswing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatroom_basedonswing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="bittech" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatroom_basedonswing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="bittech" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatroom_basedonswing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="bittech" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatroom_basedonswing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="bittech" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatroom_basedonswing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="bittech" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="CreateGroupGUI" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatroom_basedonswing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="bittech" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatroom_basedonswing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -401,15 +379,15 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.lqh.utils" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.lqh" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\javaCode\chat\src\main\resouices\client" />
+      <recent name="E:\javaCode\chat\src\main\resouices" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\javaCode\chat\src\main\resouices\client" />
-      <recent name="E:\javaCode\chat\src\main\resouices" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.lqh" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -424,7 +402,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Login">
+  <component name="RunManager" selected="Application.MulitThreadService">
     <configuration name="Login" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.lqh.client.services.Login" />
       <module name="chat" />
@@ -537,6 +515,9 @@
       <workItem from="1566535396904" duration="8761000" />
       <workItem from="1566711532552" duration="7203000" />
       <workItem from="1566820504577" duration="5785000" />
+      <workItem from="1566872356546" duration="5184000" />
+      <workItem from="1566894002415" duration="866000" />
+      <workItem from="1566980281548" duration="8134000" />
     </task>
     <servers />
   </component>
@@ -573,7 +554,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100254000" />
+    <option name="totallyTimeSpent" value="114438000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -588,7 +569,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="UI Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.11620294" visible="true" weight="0.30711043" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.11620294" visible="true" weight="0.3207262" />
       <window_info id="Structure" order="2" sideWeight="0.88379705" side_tool="true" weight="0.2881997" />
       <window_info id="Designer" order="3" />
       <window_info id="Favorites" order="4" sideWeight="0.502439" side_tool="true" weight="0.2246596" />
@@ -601,8 +582,8 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.3289689" />
@@ -616,7 +597,7 @@
     </layout>
     <layout-to-restore>
       <window_info id="UI Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.11620294" visible="true" weight="0.30711043" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.11620294" visible="true" weight="0.3207262" />
       <window_info id="Structure" order="2" sideWeight="0.88379705" side_tool="true" weight="0.2881997" />
       <window_info id="Designer" order="3" />
       <window_info id="Favorites" order="4" sideWeight="0.502439" side_tool="true" weight="0.2246596" />
@@ -629,8 +610,8 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.3289689" />
@@ -647,30 +628,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/Test.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/JDBCTest.java" />
-    <entry file="das://05e90a3b-66c3-4ea0-ae5a-ae4a7dcee402/schema/jdbc_test/table/user.sql" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/druid/1.1.13/druid-1.1.13.jar!/com/alibaba/druid/pool/DruidDataSource.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="90" column="13" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/sql/Statement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-503">
@@ -747,16 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/ClientToService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../java49_chatroom/src/main/java/com/bittech/client/service/FriendList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -805,19 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/Login.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2760">
-          <caret line="103" selection-start-line="103" selection-end-line="104" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/utils/Commutils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -858,6 +792,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/GroupChatGUI.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/FriendList.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/CreateGroupGUI.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resouices/db.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -865,25 +808,131 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/resources/client/login.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/resources/datasource.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/resources/socket.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/Connect2Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/ClientToService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-26">
+          <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resouices/socket.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/UserReg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-346">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/Login.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/PrivateChatGUI.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/PrivateChatGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1294">
-          <caret line="64" column="13" lean-forward="true" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+        <state relative-caret-position="228">
+          <caret line="71" column="40" lean-forward="true" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
           <folding>
-            <element signature="e#1433#2285#0" expanded="true" />
+            <element signature="e#2404#2405#0" expanded="true" />
+            <element signature="e#2451#2452#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/PrivateChat.java">
+    <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/GroupChatGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="64" column="43" selection-start-line="64" selection-start-column="43" selection-end-line="64" selection-end-column="43" />
+        <state relative-caret-position="90">
+          <caret line="33" column="38" lean-forward="true" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/CreateGroupGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
           <folding>
-            <element signature="e#1393#2179#0" expanded="true" />
-            <element signature="e#2178#2179#0" expanded="true" />
-            <element signature="e#2236#2237#0" expanded="true" />
-            <element signature="e#2266#2267#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/CreatGroupChat.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/CreatGroupChat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="85" column="45" lean-forward="true" selection-start-line="85" selection-start-column="45" selection-end-line="85" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/GroupChat.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/FriendList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="72" column="45" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#PrvateChatClick#0;class#FriendList#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/FriendsList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="78" column="37" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
+          <folding>
+            <element signature="n#!!doc;n#DaemonTask#0;n#FriendsList#0" />
+            <element signature="class#PrivateLabelAction#0;class#FriendsList#0" />
+            <element signature="e#7201#7202#0" expanded="true" />
+            <element signature="e#7251#7252#0" expanded="true" />
+            <element signature="method#FriendsList#0;class#FriendsList#0" />
+            <element signature="method#loadUsers#0;class#FriendsList#0" />
+            <element signature="e#10974#10975#0" expanded="true" />
+            <element signature="e#11022#11023#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="108" column="11" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -891,47 +940,24 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/PrivateChat.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/PrivateChatGUI.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/GroupChatGUI.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/GroupChat.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/GroupChatGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/PrivateChat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2074">
-          <caret line="85" column="22" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="22" />
-          <folding>
-            <element signature="e#1681#2811#0" expanded="true" />
-            <element signature="e#2810#2811#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/resources/socket.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resouices/socket.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        <state relative-caret-position="420">
+          <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/server/MultiThreadServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="104" column="41" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="41" />
+        <state relative-caret-position="180">
+          <caret line="113" column="28" selection-start-line="113" selection-start-column="28" selection-end-line="113" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/service/MulitThreadService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-236">
-          <caret line="57" column="60" lean-forward="true" selection-start-line="57" selection-start-column="60" selection-end-line="57" selection-end-column="60" />
+        <state relative-caret-position="364">
+          <caret line="117" column="76" lean-forward="true" selection-start-line="117" selection-start-column="76" selection-end-line="117" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ExecuteClient#0;class#ExecuteClient#0;class#MulitThreadService#0" />
@@ -939,60 +965,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/FriendList.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/GroupChat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1774">
-          <caret line="79" column="23" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lqh/client/services/FriendList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="109" column="41" lean-forward="true" selection-start-line="109" selection-start-column="41" selection-end-line="109" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#DaemonTask#0;class#FriendList#0" />
-            <element signature="method#run#0;class#DaemonTask#0;class#FriendList#0" />
-            <element signature="class#PriateChat#0;class#FriendList#0" />
-            <element signature="class#GroupChat#0;class#FriendList#0" />
-            <element signature="method#mousePressed#0;class#GroupChat#0;class#FriendList#0" />
-            <element signature="method#mouseReleased#0;class#GroupChat#0;class#FriendList#0" />
-            <element signature="method#mouseEntered#0;class#GroupChat#0;class#FriendList#0" />
-            <element signature="method#mouseExited#0;class#GroupChat#0;class#FriendList#0" />
-            <element signature="method#reloadFriendList#0;class#FriendList#0" />
-            <element signature="method#reloadGroupList#0;class#FriendList#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/FriendsList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="232" column="34" selection-start-line="232" selection-start-column="20" selection-end-line="232" selection-end-column="34" />
-          <folding>
-            <element signature="class#DaemonTask#0;class#FriendsList#0" />
-            <element signature="class#PrivateLabelAction#0;class#FriendsList#0" />
-            <element signature="class#GroupLabelAction#0;class#FriendsList#0" />
-            <element signature="method#mouseClicked#0;class#GroupLabelAction#0;class#FriendsList#0" />
-            <element signature="method#loadUsers#0;class#FriendsList#0" />
-            <element signature="method#loadGroupList#0;class#FriendsList#0" />
-            <element signature="e#10974#10975#0" expanded="true" />
-            <element signature="e#11022#11023#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/CreateGroupGUI.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../chatroom_basedonswing/src/main/java/com/bittech/java/client/service/CreateGroupGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        <state relative-caret-position="138">
+          <caret line="73" column="46" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
         </state>
       </provider>
     </entry>

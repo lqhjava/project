@@ -50,7 +50,7 @@ public class FriendList {
                             //处理服务器发来的私聊信息
                             //分解出是谁发来的，私聊信息。
                             String friendName = messageVO.getMsg().split("-")[0];
-                            String msg = messageVO.getMsg();
+                            String msg = messageVO.getMsg().split("-")[1];
                             //检查此私聊是否是第一次创建
                             if(privateChatList.containsKey(friendName)){
                                 //不是第一次创建
@@ -62,15 +62,47 @@ public class FriendList {
                                 //第一次创建
                                 PrivateChat privateChat = new PrivateChat(friendName,myName,clientToService);
                                 privateChatList.put(friendName,privateChat);
-                                privateChat.readFromService(msg);
+                                privateChat.readFromService(friendName+"说："+msg);
                             }
                         }else if(messageVO.getType().equals(4)){
+                            //群聊
+                           String groupName = messageVO.getTo().split("-")[0];
+                            String senderName = messageVO.getMsg().split("-")[0];
+                            String groupMsg = messageVO.getMsg().split("-")[1];
+                            // 若此群名称在群聊列表
+                            if (groupChatLsit.containsKey(groupName)) {
+                                if (groupList.containsKey(groupName)) {
+                                    // 群聊界面弹出
+                                    GroupChat groupChatGUI = groupList.get(groupName);
+                                    groupChatGUI.getFrame().setVisible(true);
+                                    groupChatGUI.readFromServer(senderName+"说:"+groupMsg);
+                                }else {
+                                    Set<String> names = groupChatLsit.get(groupName);
+                                    GroupChat groupChatGUI = new GroupChat(groupName,
+                                            names,myName,clientToService);
+                                    groupList.put(groupName,groupChatGUI);
+                                    groupChatGUI.readFromServer(senderName+"说:"+groupMsg);
+                                }
+                            }else {
+                                // 若群成员第一次收到群聊信息
+                                // 1.将群名称以及群成员保存到当前客户端群聊列表
+                                Set<String> friends = (Set<String>) Commutils.jsonToObject(messageVO.getTo().split("-")[1],
+                                        Set.class);
+                                groupChatLsit.put(groupName, friends);
+                                reloadGroupList();
+                                // 2.弹出群聊界面
+                                GroupChat groupChatGUI = new GroupChat(groupName,
+                                        friends,myName,clientToService);
+                                groupList.put(groupName,groupChatGUI);
+                                groupChatGUI.readFromServer(senderName+"说:"+groupMsg);
+                            }
 
                         }
 
                     } else if (strFromServer.startsWith("newLogin:")){
                         // 好友上线提醒
                         String newFriend = strFromServer.split(":")[1];
+                        users.add(newFriend);
                         JOptionPane.showMessageDialog(null,
                                 newFriend+"上线了!","上线提醒",
                                 JOptionPane.INFORMATION_MESSAGE);
@@ -106,7 +138,7 @@ public class FriendList {
         createGroupBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new GroupChatClick(userName,users,connectToServer,
+                new CreatGroupChat(userName,users,connectToServer,
                         FriendList.this);
             }
         });
@@ -166,7 +198,7 @@ public class FriendList {
         public void mouseClicked(MouseEvent e) {
             //鼠标点击 创建群聊
             //如果已经有打开过群聊
-            if(groupChatLsit.containsKey(groupName)){
+            if(groupList.containsKey(groupName)){
                 GroupChat groupChat = groupList.get(groupName);
                 groupChat.getFrame().setVisible(true);
             }else {
@@ -214,7 +246,8 @@ public class FriendList {
            String lableName = iterator.next();
            labels[i] = new JLabel(lableName);
            //为每个好友lable添加鼠标点击事件
-           //TODO
+           //userLabels[i].addMouseListener(new PrivateLabelAction(userName));
+           labels[i].addMouseListener(new PrvateChatClick(lableName));
            friendLabelPanel.add(labels[i]);
            i++;
        }
@@ -245,6 +278,9 @@ public class FriendList {
             groupNamePanel.add(labels[i]);
             i++;
         }
+        groupPanel.setViewportView(groupNamePanel);
+        groupPanel.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        groupPanel.revalidate();
     }
 
     //添加群聊

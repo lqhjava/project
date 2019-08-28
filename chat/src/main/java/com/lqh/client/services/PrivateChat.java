@@ -5,6 +5,7 @@ import com.lqh.vo.MessageVO;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.InputMethodListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.PrintStream;
@@ -48,7 +49,7 @@ public class PrivateChat {
         //获取键盘输入
         sendToService.addKeyListener(new KeyAdapter() {
             @Override
-            public void keyTyped(KeyEvent e) {
+            public void keyPressed(KeyEvent e) {
                 StringBuilder sb = new StringBuilder();
                 sb.append(sendToService.getText());
                 //用户发送信息 按下Enter键

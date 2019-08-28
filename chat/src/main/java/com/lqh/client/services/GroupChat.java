@@ -49,10 +49,9 @@ public class GroupChat {
             JLabel jLabel = new JLabel(lableName);
             friendsPanel.add(jLabel);
         }
-
         sendToService.addKeyListener(new KeyAdapter() {
             @Override
-            public void keyTyped(KeyEvent e) {
+            public void keyPressed(KeyEvent e) {
                 //记录输入信息
                 StringBuilder sb = new StringBuilder();
                 sb.append(sendToService.getText());
@@ -72,6 +71,7 @@ public class GroupChat {
                     } catch (UnsupportedEncodingException ex) {
                         ex.printStackTrace();
                     }
+                    sendToService.setText("");
                 }
             }
         });
